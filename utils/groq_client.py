@@ -13,8 +13,7 @@ from dotenv import load_dotenv
 
 # Load .env from project root (parent of utils/)
 _root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-load_dotenv(dotenv_path=os.path.join(_root, ".env"), override=True)
-
+load_dotenv(dotenv_path=os.path.join(_root, ".env"), override=False)
 
 def get_groq_client():
     """Return headers for Groq API calls."""
